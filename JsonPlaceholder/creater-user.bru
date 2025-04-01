@@ -1,0 +1,54 @@
+meta {
+  name: Create User
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{url}}/users
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Accept: application/json
+}
+
+body:json {
+  {
+    "name": "John Test",
+    "username": "johntest",
+    "email": "john@test.com",
+    "address": {
+      "street": "Test Street",
+      "suite": "Apt. 123",
+      "city": "Testville",
+      "zipcode": "12345-6789"
+    },
+    "phone": "1-234-567-8900",
+    "website": "testsite.com"
+  }
+}
+
+tests {
+  // Verificar código de estado
+  test("Status code is 201", () => {
+    expect(res.status).to.equal(201);
+  });
+  
+  // Verificar que la respuesta tiene un ID
+  test("Response has an ID", () => {
+    expect(res.body).to.have.property('id');
+  });
+  
+  // Verificar que el nombre es correcto
+  test("Name is correct", () => {
+    expect(res.body.name).to.equal('John Test');
+  });
+  
+  // Verificar que el email es correcto
+  test("Email is correct", () => {
+    expect(res.body.email).to.equal('john@test.com');
+  });
+}

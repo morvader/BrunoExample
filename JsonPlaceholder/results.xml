@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<testsuites>
+  <testsuite name="get-users" errors="0" failures="0" skipped="0" tests="6" timestamp="2025-04-01T03:42:03.881" hostname="TSYL174" time="0.214">
+    <testcase name="res.body.length eq 10" status="pass" classname="https://jsonplaceholder.typicode.com/users" time="0.036"/>
+    <testcase name="Status code is 200" status="pass" classname="https://jsonplaceholder.typicode.com/users" time="0.036"/>
+    <testcase name="Response is an array" status="pass" classname="https://jsonplaceholder.typicode.com/users" time="0.036"/>
+    <testcase name="Has at least one user" status="pass" classname="https://jsonplaceholder.typicode.com/users" time="0.036"/>
+    <testcase name="Has 10 users" status="pass" classname="https://jsonplaceholder.typicode.com/users" time="0.036"/>
+    <testcase name="User has correct structure" status="pass" classname="https://jsonplaceholder.typicode.com/users" time="0.036"/>
+  </testsuite>
+  <testsuite name="creater-user" errors="0" failures="0" skipped="0" tests="4" timestamp="2025-04-01T03:42:03.884" hostname="TSYL174" time="0.377">
+    <testcase name="Status code is 201" status="pass" classname="https://jsonplaceholder.typicode.com/users" time="0.094"/>
+    <testcase name="Response has an ID" status="pass" classname="https://jsonplaceholder.typicode.com/users" time="0.094"/>
+    <testcase name="Name is correct" status="pass" classname="https://jsonplaceholder.typicode.com/users" time="0.094"/>
+    <testcase name="Email is correct" status="pass" classname="https://jsonplaceholder.typicode.com/users" time="0.094"/>
+  </testsuite>
+  <testsuite name="get-user1" errors="0" failures="0" skipped="0" tests="4" timestamp="2025-04-01T03:42:03.884" hostname="TSYL174" time="0.048">
+    <testcase name="res.body.id eq 1" status="pass" classname="https://jsonplaceholder.typicode.com/users/1" time="0.012"/>
+    <testcase name="res.body.name eq Leanne Graham" status="pass" classname="https://jsonplaceholder.typicode.com/users/1" time="0.012"/>
+    <testcase name="res.body.address.street eq Kulas Light" status="pass" classname="https://jsonplaceholder.typicode.com/users/1" time="0.012"/>
+    <testcase name="Status code is 200" status="pass" classname="https://jsonplaceholder.typicode.com/users/1" time="0.012"/>
+  </testsuite>
+</testsuites>
